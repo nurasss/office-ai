@@ -1,0 +1,30 @@
+{
+  "name": "ai-company-os",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "db:generate": "pnpm --filter @ai-company/db generate",
+    "db:migrate": "pnpm --filter @ai-company/db migrate",
+    "db:rollback": "pnpm --filter @ai-company/db rollback",
+    "db:seed": "pnpm --filter @ai-company/db seed",
+    "dev:api": "pnpm --filter @ai-company/api dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.18.0"
+  }
+}
